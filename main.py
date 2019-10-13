@@ -20,13 +20,14 @@ import pandas as pd
 import random
 
 df=pd.read_csv("furniturepalacedata.csv")
+cookie="INSERT YOUR INSTAGRAM COOKIE HERE"
 profile = webdriver.FirefoxProfile()
 profile.set_preference("general.useragent.override", "Mozilla/5.0 (Linux; <Android Version>; <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>")            
 driver=webdriver.Firefox(executable_path = 'C:\\geckodriver\\geckodriver.exe',firefox_profile=profile)
 driver.get('https://www.instagram.com/accounts/login')
 driver.add_cookie({
     "name": "sessionid",
-    "value": "1201595523%3AFvof8Df4g0EAJG%3A15",
+    "value": cookie,
     "domain":".instagram.com"
 })
 driver.get('https://www.instagram.com')
